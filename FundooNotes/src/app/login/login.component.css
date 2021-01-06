@@ -1,0 +1,49 @@
+.flex {
+    display: flex;
+    padding: 3em;
+    
+   
+    width: 400px;
+    height: 400px;
+    margin: 2% auto;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 2 1 rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    }
+
+    .flex-1{
+        text-align: center;
+    }
+
+
+    .f {
+        color: dodgerblue;
+        font-weight: bolder;
+        font-size:xx-large;
+      }
+      
+      .u {
+        color: red;
+        font-weight: bolder;
+        font-size:xx-large;
+      }
+      
+      .n {
+        color: yellow;
+        font-weight: bolder;
+        font-size:xx-large;
+      }
+      
+      .d {
+        color: blue;
+        font-weight: bolder;
+        font-size:xx-large;
+      }
+      
+      .o {
+        color: purple;
+        font-weight: bolder;
+        font-size:xx-large;
+      }
+
+  
