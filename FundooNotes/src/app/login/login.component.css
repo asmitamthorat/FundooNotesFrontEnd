@@ -1,7 +1,7 @@
 .flex {
     display: flex;
     padding: 3em;
-    
+    flex-direction: column;
    
     width: 400px;
     height: 400px;
@@ -9,10 +9,14 @@
     border: 1px solid rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 2 1 rgba(0, 0, 0, 0.15);
     border-radius: 8px;
+    align-items:center;
+    
     }
 
     .flex-1{
-        text-align: center;
+       
+     
+      
     }
 
 
@@ -46,4 +50,29 @@
         font-size:xx-large;
       }
 
+
+      .flex-1{
+        height: 40px;
+        width: 130px;
+        margin: 2% auto;
+      }
+
+      .flex-line-2{
+        margin: 2% auto;
+      }
   
+      .flex-3{
+        height: 160px;
+        width: 200px; 
+     /*   border: 1px solid rgba(0, 0, 0, 0.15);*/
+        margin-top: 25px;
+      }
+
+      .submit-button{
+        height: 20px;
+        width: 50px;
+       margin-left: 60px;
+      /*  border: 1px solid rgba(0, 0, 0, 0.15);*/
+      }
+
+      
