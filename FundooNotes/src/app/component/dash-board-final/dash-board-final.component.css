@@ -1,0 +1,141 @@
+
+
+.main-flex{
+    height: 600px;
+    width: 1200px;
+  /*  border: 1px solid black;*/
+    margin: 1% auto ;
+}
+
+.flex-top{
+    display: flex;
+    height: 60px;
+    width: 1200px;
+    border: 1px solid rgb(56, 56, 2);
+    justify-content: space-between;
+}
+
+
+.left-flex{
+    height: 500px;
+    width: 200px;
+  /*  border: 1px solid black;*/
+   
+
+}
+
+
+
+
+
+.header-1{
+    display: flex;
+    width: 200px;
+    height: 60px;
+   /* border: 1px solid black;*/
+    justify-content: center;
+    align-items: center;
+   justify-content: space-around;
+   
+    
+}
+
+.header-2{
+    display: flex;
+    width: 400px;
+    height: 60px;
+   /* border: 1px solid black;*/
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(226, 222, 222);
+    border-radius: 8px;
+}
+
+
+.search-box{
+  display: flex;
+  background-color: rgb(226, 222, 222);
+  height: 40px;
+  width: 250px;
+ /* border: 1px solid black;*/
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+.search-box input{
+  background-color: rgb(226, 222, 222);
+  border: none;
+}
+
+
+.header-3{
+    display: flex;
+    width: 200px;
+    height: 60px;
+  /*  border: 1px solid black;*/
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.sidebar {
+    width: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+  .sidebar:hover {
+    z-index: 99;
+    width: 250px;
+    border: 0px;
+    border-right: 1px solid gainsboro;
+    box-shadow: 0px 0px 5px 2px gainsboro;
+    transition: all ease 0.1s;
+    position: absolute;
+    background-color: white;
+  }
+  
+  .sidebar-hover {
+    position: absolute;
+    background-color: white;
+    z-index: 99;
+    height: 100vh;
+    width: 250px;
+    border: 0px;
+    border-right: 1px solid gainsboro;
+    transition: all ease 0.1s;
+    box-shadow: 0px 0px 5px 2px gainsboro;
+  }
+  
+  button {
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+  
+  img {
+    width: 24px;
+    max-height: 24px;
+  }
+  
+  .sidebar__notes {
+    max-height: 24px;
+    padding: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  .sidebar__notes:hover {
+    background-color: rgb(248, 208, 134);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  

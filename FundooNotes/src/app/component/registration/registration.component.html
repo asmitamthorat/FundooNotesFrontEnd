@@ -19,23 +19,25 @@
               </h2>
               <h1>Create your Fundoo Account</h1>
               <h4>Continue to Fundoo</h4>
-              <form class="form" [formGroup]="myForm">
+              <div class="MainFlex">
+                <form class="form" [formGroup]="myForm">
                   <div class="form-1">
-                      <p>
+                     
                         <mat-form-field appearance="outline">
                             <mat-label>First Name</mat-label>
                             <input matInput autocomplete="off" formControlName="firstName" />
                             <mat-error >Please provide first name!</mat-error>
                           </mat-form-field>
+
                           <mat-form-field appearance="outline">
                             <mat-label>Last Name</mat-label>
                             <input matInput autocomplete="off" formControlName="lastName" />
                             <mat-error > Please provide last name!</mat-error>
                             </mat-form-field>
-                        </p>
+                       
                   </div>
                   <div class="from-2">
-                    <p>
+                    
                         <mat-form-field appearance="outline">
                           <mat-label>email</mat-label>
                           <input matInput autocomplete="off" formControlName="email" />
@@ -43,33 +45,37 @@
                           <mat-hint>You can use letters, numbers & periods</mat-hint>
                           <mat-error >Please provide proper email!</mat-error>
                         </mat-form-field>
-                      </p>
+                     
                   </div>
                   <div class="from-3">
-                    <p>
+                   
                         <mat-form-field appearance="outline">
                             <mat-label>passwrod</mat-label>
                             <input matInput autocomplete="off" formControlName="password" />
                             <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
                             <mat-error >please Enter the passwrod!</mat-error>
-                          </mat-form-field>
-                          <mat-form-field appearance="outline">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
                             <mat-label>confirm</mat-label>
                             <input matInput autocomplete="off" formControlName="confirm" />
                             <mat-error > Please confirm password!</mat-error>
                             </mat-form-field>
-                      </p>
+                     
 
                   </div>
                   <div class="from-4">
                     <button mat-button>sign in instead</button>
-                    <button mat-raised-button color="primary">Register</button>
+                    <button mat-raised-button color="primary" (click)='submitUser()'>Register</button>
 
                   </div>
 
               </form>
               
         </div>
+
+              </div>
+              
         <div class="flex__right">
             <img
             src="https://ssl.gstatic.com/accounts/signup/glif/account.svg"

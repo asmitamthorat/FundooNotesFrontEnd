@@ -1,0 +1,30 @@
+.mat-card{
+    display: flex;
+   margin: 0.1% auto;
+}
+
+
+.mat-card1{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border:  1px solid black;
+    height: 180px;
+}
+
+.mat-card1 input{
+    border: none;
+    font-size: 15px;
+}
+
+.Take-note{
+   
+}
+
+.last-flex{
+   
+    display: flex;
+    height: 30px;
+    width: 350px;
+  /* border:  1px solid black;*/
+}

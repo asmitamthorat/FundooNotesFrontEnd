@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addnotes.component.css">
+</head>
+<body>
+    <div class="mat-card" >
+        
+        <mat-card class="mat-card1">
+          <form class="form" [formGroup]="myForm">
+            <div>
+                <mat-form-field appearance="outline">
+                    <input matInput type="text"  id="search-input" autocomplete="off" placeholder="title" formControlName="title"/>
+                  
+                </mat-form-field>
+            </div>
+            <div class="Take-note">
+                <mat-form-field appearance="outline">
+                    <input matInput type="text"  id="search-input" autocomplete="off" placeholder="Take a note.." formControlName="description" />
+                    
+                </mat-form-field>
+            </div>
+            <div class="last-flex">
+                <app-archieve></app-archieve>
+                <app-change-color></app-change-color>
+                <button >
+                    <mat-icon class="close-icon" (click)='submitNote()'>close</mat-icon>
+                  </button>
+               
+            </div>
+            
+          </form>      
+        </mat-card>
+        
+    </div>
+    
+    
+</body>
+</html>

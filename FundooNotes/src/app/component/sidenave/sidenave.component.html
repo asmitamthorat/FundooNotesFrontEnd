@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sidenave.component.css">
+</head>
+<body>
+    <div class="example-container" >
+        <mat-toolbar color="primary" class="example-toolbar">
+          
+          <div class="header-flex-1" >
+              <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+          </div>
+          <div class="main-header">
+            <div class="sub-header-1">
+              <div class="fundoo-icon">
+                <img
+                          src="https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png"
+                          alt="keep-image"
+                        />
+              </div>
+              <div>
+                <h1 class="example-app-name">Keep</h1>
+              </div>
+            </div>
+            <div class="sub-header-2">
+              <div class="header-flex-2">
+                <div>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" > <mat-icon>search</mat-icon>
+                    </button>
+                </div>
+                 <input type="text"  id="search-input" autocomplete="off" placeholder="search"/>
+                <div>
+                  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" > <mat-icon>close</mat-icon>
+                    </button>
+          
+                  </div>
+              </div>
+            </div>
+            <div class="header-flex-3">
+              <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"  >
+                        <mat-icon class="refresh__icon">refresh</mat-icon>
+                      </button>
+              </div>
+              <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" >
+                       <mat-icon>settings</mat-icon>
+                      </button>
+              </div>
+              <div>
+                  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" >
+                      <mat-icon>drag_indicator</mat-icon>
+                      </button>
+              </div>
+              <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" >
+                     <mat-icon class="menu-icon">account_circle</mat-icon>
+                </button>
+              </div>
+              
+            </div>
+
+          </div>
+          
+          
+           
+         
+         
+         
+        </mat-toolbar>
+          
+        
+        
+        <mat-sidenav-container class="example-sidenav-container">
+        
+          <div class="header-1"></div>   
+                           
+          <mat-sidenav #snav fixedTopGap="56">
+             <app-dash-board-final></app-dash-board-final>
+           
+          </mat-sidenav>
+      
+          <mat-sidenav-content>
+            <div>
+              
+              <app-notes></app-notes>
+            </div>
+            
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+      </div>
+      
+  
+      
+    
+</body>
+</html>

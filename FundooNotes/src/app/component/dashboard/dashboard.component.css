@@ -1,0 +1,86 @@
+
+.toolbar__right {
+  display: flex;
+  justify-content: space-between;
+  justify-items: flex-end;
+  justify-self: flex-end;
+  align-items: center;
+  border: 1px solid;
+}
+
+.mat-button {
+  min-width: 0px;
+  padding: 2px;
+  line-height: 0;
+  border: 1px solid black ;
+  border-radius: 50%;
+}
+
+.toolbar__left {
+  display: flex;
+
+  align-items: center;
+ 
+  height: 600px;
+  width: 60px;
+  border: 1px solid green ;
+ 
+}
+
+.mat-toolbar {
+    background-color: white;
+    border-bottom: 1.5px solid gainsboro;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    min-width: 0px;
+  }
+
+  .toolbar__keep{
+      display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    height: 50px;
+    width: 100px;
+    justify-content: space-between;
+    margin-top:10px;
+    margin-left: 10px;
+  }
+
+  .toolbar__keep img{
+      height: 45px;
+      width: 40px;
+  }
+
+  .toolbar__mid{
+      display: flex;
+      height: 50px;
+      width: 600px;
+      margin-top: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background-color: rgb(231, 227, 227);
+      align-items: center;
+    
+  }
+
+  .toolbar__mid input{
+    height: 45px;
+    width: 540px;
+    background-color: rgb(231, 227, 227);
+    border: none;
+    outline: none;
+  }
+
+  .flex-toolbar-right{
+      display: flex;
+      height: 60px;
+      width: 250px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      align-items: center;
+      justify-content: space-around;
+  }
+
+  .fundoo-icon{
+      height: 60px;
+      width: 400px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+  }
