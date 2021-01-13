@@ -10,6 +10,7 @@ import {DashBoardFinalComponent} from './component/dash-board-final/dash-board-f
 import {SidenaveComponent} from './component/sidenave/sidenave.component';
 import { TakeNoteComponent} from './component/take-note/take-note.component'
 import { AuthGuard } from './auth.guard';
+import {NoteComponent} from './component/note/note.component'
 
 
 
@@ -26,12 +27,19 @@ const routes: Routes = [
     canActivate:[AuthGuard]
   },
   {path:'DashBoardFinalComponent' ,component:DashBoardFinalComponent},
+
   {
-    path:'s',
+    path:'home',
     component:SidenaveComponent,
     canActivate:[AuthGuard]
   },
   {path:'takenote',component:TakeNoteComponent},
+  
+  {
+    path:'displaynotes',
+    component:NoteComponent,
+    canActivate:[AuthGuard]
+  }
 ];
 
 @NgModule({

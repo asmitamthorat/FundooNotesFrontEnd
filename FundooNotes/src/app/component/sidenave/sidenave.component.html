@@ -31,7 +31,10 @@
                     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" > <mat-icon>search</mat-icon>
                     </button>
                 </div>
-                 <input type="text"  id="search-input" autocomplete="off" placeholder="search"/>
+                <div class="search-box">
+                  <input type="text"  id="search-input" autocomplete="off" placeholder="search"/>
+                </div>
+                 
                 <div>
                   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" > <mat-icon>close</mat-icon>
                     </button>
@@ -60,15 +63,8 @@
                      <mat-icon class="menu-icon">account_circle</mat-icon>
                 </button>
               </div>
-              
             </div>
-
           </div>
-          
-          
-           
-         
-         
          
         </mat-toolbar>
           
@@ -84,17 +80,20 @@
           </mat-sidenav>
       
           <mat-sidenav-content>
-            <div>
-              
+            <div class="middle-flask">
               <app-notes></app-notes>
+              <div>
+                <div class="note-div">
+                  <app-note></app-note>
+                </div>
+              </div>
+              
+             
             </div>
             
           </mat-sidenav-content>
         </mat-sidenav-container>
       </div>
-      
   
-      
-    
 </body>
 </html>

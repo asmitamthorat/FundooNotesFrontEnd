@@ -29,6 +29,10 @@ import { DashBoardFinalComponent } from './component/dash-board-final/dash-board
 
 import {TokeninterceptorService} from './services/token/tokeninterceptor.service';
 import { AuthGuard } from './auth.guard';
+import { NoteComponent } from './component/note/note.component';
+import { DisplaynoteComponent } from './component/displaynote/displaynote.component';
+import { IconComponent } from './component/icon/icon.component';
+
 
 
 
@@ -48,6 +52,10 @@ import { AuthGuard } from './auth.guard';
     ChangeColorComponent,
     TakeNoteComponent,
     DashBoardFinalComponent,
+    NoteComponent,
+    DisplaynoteComponent,
+    IconComponent,
+   
    
    
   ],

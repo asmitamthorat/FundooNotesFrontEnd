@@ -1,30 +1,118 @@
-.mat-card{
-    display: flex;
-   margin: 0.1% auto;
-}
-
-
-.mat-card1{
+.downflex{
     display: flex;
     flex-direction: column;
-    width: 350px;
-    border:  1px solid black;
-    height: 180px;
-}
-
-.mat-card1 input{
-    border: none;
-    font-size: 15px;
-}
-
-.Take-note{
+    height: 150px;
+    width: 600px;
+    border:  1px solid #6b6464;
+    justify-content: space-between;
+    margin-left: 400px;
+    margin-top: 20px;
+    border-radius: 8px;
    
+  
 }
+
+
+.downflex .form{
+    justify-content: space-between;
+}
+
+.takenote-flask .mat-card{
+    
+
+}
+
+
+
+
+
+
+
 
 .last-flex{
    
     display: flex;
+    height: 40px;
+    width: 500px;
+    margin-top: 30px;
+  /*  border:  1px solid black;*/
+}
+
+
+.add-note-title  input{
+   /* border:  1px solid black;*/
+    margin-top: 5px;
+    width: 400px;
     height: 30px;
-    width: 350px;
-  /* border:  1px solid black;*/
+    font-size: 20px;
+    border: none;
+    outline: 0px;
+}
+
+.Take-note input{
+  /*  border:  1px solid black;*/
+    margin-top: 5px;
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    outline: 0px;
+}
+
+
+
+.takenote{
+    height: 30px;
+   
+    width: 100px;
+    
+}
+
+.takenote input{
+    border: none;
+    font-size:18px;
+    outline: none;
+}
+
+
+.mat-card {
+    background: #fff;
+  /*  color: rgba(0,0,0,.87);*/
+    width: 400px;
+}
+
+
+
+.mat-card[_ngcontent-eoj-c96] {
+    background: #fff;
+    width: 400px;
+    height: 130px;
+}
+
+
+.add-note-title .mat-form-field input{
+    border: none;
+} 
+
+
+.mat-form-field-wrapper {
+    position: relative;
+    height: 35px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: .25em 0;
+    height: 35px;
+}
+
+
+.takenote-flask .mat-card{
+    height: 30px;
+    width: 800px;
+  /*  border:  1px solid black;*/
+}
+
+.takenote-flask{
+   margin-left: 300px;
+   
 }

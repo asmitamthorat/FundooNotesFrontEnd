@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { NoteService } from 'src/app/services/note/note.service';
 
+import { EventEmitter, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-addnotes',
@@ -10,6 +12,8 @@ import { NoteService } from 'src/app/services/note/note.service';
 })
 export class AddnotesComponent implements OnInit {
   myForm:FormGroup;
+  flag:boolean=true;
+  isArchived:boolean=false;
   constructor(private fb:FormBuilder,
               private noteService:NoteService  ) { }
 
@@ -31,7 +35,11 @@ export class AddnotesComponent implements OnInit {
   get description(){
     return this.myForm.get('description');
   }
+  
+  GetOutputVal( isArchived:boolean){
+    this.isArchived=isArchived;
 
+  }
 
   submitNote():void{
     let data = { 
@@ -39,7 +47,7 @@ export class AddnotesComponent implements OnInit {
     description:this.description.value,
     isPined:false,
     color: '#FFFFFF',
-    isArchived: false,
+    isArchived: this.isArchived,
     labelIdList: [],
     reminder: 'Mon Jan 11 2021 20:00:00 GMT+0530 (India Standard Time)', 
     collaberators: []
@@ -47,8 +55,23 @@ export class AddnotesComponent implements OnInit {
     console.log(data)
     this.noteService.addNote(data).subscribe(( response )=> {
       console.log(response)
+    this.flag=true
     } );
     } ;
+
+    onclick() {  
+      if(this.flag===true){
+        this.flag=false
+      }
+   }
+   
+   message: any = this.noteService.getnote()
+
+  @Output() messageEvent = new EventEmitter<string>();
+
+  sendMessage() {
+    this.messageEvent.emit(this.message)
+  }
 
   
 
