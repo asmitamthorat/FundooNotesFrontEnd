@@ -13,6 +13,7 @@ import { EventEmitter, Output } from '@angular/core';
 export class AddnotesComponent implements OnInit {
   myForm:FormGroup;
   flag:boolean=true;
+  isColor:string='';
   isArchived:boolean=false;
   constructor(private fb:FormBuilder,
               private noteService:NoteService  ) { }
@@ -38,7 +39,11 @@ export class AddnotesComponent implements OnInit {
   
   GetOutputVal( isArchived:boolean){
     this.isArchived=isArchived;
+  }
 
+  getcolor(isColor:string){
+    console.log(isColor);
+    this.isColor=isColor;
   }
 
   submitNote():void{
@@ -46,10 +51,10 @@ export class AddnotesComponent implements OnInit {
     title:this.title.value,
     description:this.description.value,
     isPined:false,
-    color: '#FFFFFF',
+    color: this.isColor,
     isArchived: this.isArchived,
     labelIdList: [],
-    reminder: 'Mon Jan 11 2021 20:00:00 GMT+0530 (India Standard Time)', 
+    reminder: ' ', 
     collaberators: []
     };
     console.log(data)

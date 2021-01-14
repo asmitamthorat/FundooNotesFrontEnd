@@ -1,0 +1,70 @@
+span {
+    border-radius: 50%;
+    margin: 2px;
+    border: 2px solid white;
+  }
+  
+  .first-row {
+    display: flex;
+  }
+  
+  .menu__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  span:hover {
+    border: 2px solid black;
+  }
+  
+  .color {
+    height: 20px;
+  }
+  
+  
+  .one-color {
+    background-color: #f28b82;
+  }
+  
+  .two-color {
+    background-color: #fbbc04;
+  }
+  
+  .three-color {
+    background-color: #fff475;
+  }
+  
+  .color-five {
+    background-color: #ccff90;
+  }
+  
+  .color-six {
+    background-color: #a7ffeb;
+  }
+  
+  .color-seven {
+    background-color: #cbf0f8;
+  }
+  
+  .color-eight {
+    background-color: #aecbfa;
+  }
+  
+  .color-nine {
+    background-color: #d7aefb;
+  }
+  
+  .color-ten {
+    background-color: #fdcfe8;
+  }
+  
+  .color-eleven {
+    background-color: #e6c9a8;
+  }
+  
+  .color-twelve {
+    background-color: #e8eaed;
+  }
+  
+  
+  

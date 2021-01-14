@@ -38,7 +38,7 @@
             </div>
             <div class="last-flex">
                 <app-archieve class="child-component" (newItemEvent)="GetOutputVal($event)" ></app-archieve>
-                <app-change-color></app-change-color>
+                <app-change-color class="child-color" (ItemEvent)="getcolor($event)" ></app-change-color>
                 <button mat-icon-button >
                     <span class="close-icon" (click)='submitNote()'>close</span>
                 </button>

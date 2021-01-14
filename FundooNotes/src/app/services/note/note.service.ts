@@ -18,7 +18,7 @@ export class NoteService {
 
   addNote(data:any): Observable<any> {
     console.log("Data in addnote",data)
-    return this.http.post('http://fundoonotes.incubation.bridgelabz.com/api/notes/addNotes', data).pipe(
+    return this.http.post(environment.backendUri + 'notes/addNotes', data).pipe(
       tap(()=>{
         this._refresh$.next();
       })
@@ -26,7 +26,7 @@ export class NoteService {
   }
 
   getnote():Observable<any>{
-    return this.http.get('http://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList');
+    return this.http.get(environment.backendUri + 'notes/getNotesList');
   }
 
   getRefreshedData() {

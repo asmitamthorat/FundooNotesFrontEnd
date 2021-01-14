@@ -32,7 +32,7 @@ import { AuthGuard } from './auth.guard';
 import { NoteComponent } from './component/note/note.component';
 import { DisplaynoteComponent } from './component/displaynote/displaynote.component';
 import { IconComponent } from './component/icon/icon.component';
-
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -75,7 +75,7 @@ import { IconComponent } from './component/icon/icon.component';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    
+    MatMenuModule,
 
   ],
   providers: [
