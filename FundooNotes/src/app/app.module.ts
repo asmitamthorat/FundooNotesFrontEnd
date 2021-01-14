@@ -33,6 +33,8 @@ import { NoteComponent } from './component/note/note.component';
 import { DisplaynoteComponent } from './component/displaynote/displaynote.component';
 import { IconComponent } from './component/icon/icon.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { UpdateComponent } from './component/update/update.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -55,6 +57,7 @@ import {MatMenuModule} from '@angular/material/menu';
     NoteComponent,
     DisplaynoteComponent,
     IconComponent,
+    UpdateComponent,
    
    
    
@@ -76,6 +79,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatListModule,
     MatCardModule,
     MatMenuModule,
+    MatDialogModule,
 
   ],
   providers: [

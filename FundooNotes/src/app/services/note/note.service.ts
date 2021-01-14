@@ -33,5 +33,22 @@ export class NoteService {
     return this._refresh$;
   }
 
+  updateNote(data:any){
+    return this.http.post(environment.backendUri + 'notes/updateNotes',data).pipe(
+      tap(()=>{
+        this._refresh$.next();
+      })
+    );
+   }
+
+
+   changeColorOfNote(data:any){
+        return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/notes/changesColorNotes",data).pipe(
+          tap(()=>{
+            this._refresh$.next();
+          })
+        );
+   }
+
 
 }

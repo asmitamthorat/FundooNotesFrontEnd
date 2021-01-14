@@ -16,6 +16,7 @@ import {NoteComponent} from './component/note/note.component'
 
 
 const routes: Routes = [
+ 
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'resetPassword',component:ResetPasswordComponent},
@@ -31,7 +32,9 @@ const routes: Routes = [
   {
     path:'home',
     component:SidenaveComponent,
-    canActivate:[AuthGuard]
+    canActivate:[AuthGuard],children: [
+      { path:"",component: NoteComponent },
+    ]
   },
   {path:'takenote',component:TakeNoteComponent},
   
