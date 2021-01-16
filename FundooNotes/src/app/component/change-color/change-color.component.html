@@ -14,19 +14,25 @@
       />
     </mat-icon>
   </button>
-  <mat-menu #menu="matMenu" yPosition="above">
-    <div class="menu__row">
-     
-     
-      <span
-        mat-menu-item
-        class="two-color color"
-        (click)="getColor('#FBBC04')"
-      ></span>
-      
-     
-     
-    </div>
-  </mat-menu>
+  <div class="color-icon">
+    
+      <mat-menu #menu="matMenu" yPosition="above">
+        <div class="menu__row" *ngFor="let color of colors">
+        
+        
+          <span
+            mat-menu-item
+            class="color"
+            [style.background-color]=color
+            (click)="getColor(color)"
+          ></span>
+          
+        
+        
+        </div>
+      </mat-menu>
+  
+  </div>
+  
 </body>
 </html>

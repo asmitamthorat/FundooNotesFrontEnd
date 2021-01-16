@@ -12,6 +12,7 @@ import { EventEmitter, Output } from '@angular/core';
 })
 export class AddnotesComponent implements OnInit {
   myForm:FormGroup;
+  reminder:string;
   flag:boolean=true;
   isColor:string='';
   isArchived:boolean=false;
@@ -38,12 +39,20 @@ export class AddnotesComponent implements OnInit {
   }
   
   GetOutputVal( isArchived:boolean){
+    console.log(isArchived);
     this.isArchived=isArchived;
   }
 
   getcolor(isColor:string){
     console.log(isColor);
     this.isColor=isColor;
+  }
+
+  getReminder(reminder:any){
+    console.log(reminder);
+    this.reminder=reminder;
+
+
   }
 
   submitNote():void{
@@ -54,7 +63,7 @@ export class AddnotesComponent implements OnInit {
     color: this.isColor,
     isArchived: this.isArchived,
     labelIdList: [],
-    reminder: ' ', 
+    reminder: this.reminder, 
     collaberators: []
     };
     console.log(data)
@@ -62,6 +71,9 @@ export class AddnotesComponent implements OnInit {
       console.log(response)
     this.flag=true
     } );
+    this.title.setValue('');
+    this.description.setValue('');
+    
     } ;
 
     onclick() {  

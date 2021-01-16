@@ -23,10 +23,10 @@ export class NoteComponent implements OnInit {
     this.noteservice.getnote().subscribe((response:any)=>{
       console.log(response);
       this.note=response['data'].data
-      this.notes=this.note.filter((ele:any)=>{
-          console.log(ele.isDeleted);
-          return ele.isDeleted==false
-        })
+      this.notes=this.note.filter((note:any)=>{
+       
+          return note.isDeleted==false
+        }).filter((note) => !note.isArchived)
         console.log("filter array");
     })
     console.log("printing the note")

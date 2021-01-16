@@ -11,6 +11,8 @@ import {SidenaveComponent} from './component/sidenave/sidenave.component';
 import { TakeNoteComponent} from './component/take-note/take-note.component'
 import { AuthGuard } from './auth.guard';
 import {NoteComponent} from './component/note/note.component'
+import { DisplayArchievComponent } from './component/display-archiev/display-archiev.component';
+import { ReminderComponent } from './component/reminder/reminder.component';
 
 
 
@@ -22,18 +24,20 @@ const routes: Routes = [
   { path: 'resetPassword',component:ResetPasswordComponent},
   {path:  'forgotPassword',component:ForgotPasswordComponent},
   {path:'dashboard',component:DashboardComponent},
+  {path:'archieve',component:DisplayArchievComponent,canActivate:[AuthGuard]},
   {
     path: 'addnotes',
     component:AddnotesComponent,
     canActivate:[AuthGuard]
   },
-  {path:'DashBoardFinalComponent' ,component:DashBoardFinalComponent},
+  {path:'reminder' ,component:ReminderComponent,canActivate:[AuthGuard]},
 
   {
     path:'home',
     component:SidenaveComponent,
     canActivate:[AuthGuard],children: [
       { path:"",component: NoteComponent },
+      { path:"archieve",component:DisplayArchievComponent}
     ]
   },
   {path:'takenote',component:TakeNoteComponent},

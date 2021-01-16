@@ -16,11 +16,12 @@ export class UpdateComponent implements OnInit {
 
   constructor(private noteService:NoteService, public dialogRef: MatDialogRef<UpdateComponent>, @Inject(MAT_DIALOG_DATA) public data: any) 
     { 
-      console.log(" note data in update", data);
+      console.log("note data in update", data);
       this.title = data.note.title,
       this.description = data.note.description
       this.id=data.note.id
       this.color=data.note.color
+      console.log(this.id)
 
 
   }

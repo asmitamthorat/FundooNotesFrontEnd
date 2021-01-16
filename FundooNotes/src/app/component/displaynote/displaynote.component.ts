@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { UpdateComponent } from '../update/update.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { GridserviceService} from 'src/app/services/gridService/gridservice.service';
 
 @Component({
   selector: 'app-displaynote',
@@ -9,21 +10,35 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 })
 export class DisplaynoteComponent implements OnInit {
   @Input() AllNotes:any;
-  constructor(public dialog: MatDialog) { }
+  isFocused:boolean=false;
+  myDiv;
+  index123=-1;
+  grid:boolean=false;
+  constructor(public dialog: MatDialog,private elementRef:ElementRef,private gridservice:GridserviceService) {
+   
+   }
 
  
 
 
   ngOnInit(): void {
+    this.grid=this.gridservice.isgrid;
+    console.log(this.grid)
+    console.log("------------------")
+   /* this.gridservice.currentGridValue.subscribe(grid=>this.grid=grid)
+    console.log(this.grid)*/
+    
   }
 
   openDialog(card:any):void{
-    console.log(card)
+   /* console.log(card)*/
     const dialogRef = this.dialog.open(UpdateComponent, {
       width: '600px',
       data: {note: card}
     })
   }
+
+  
 
 
   pinNote(card){
@@ -31,6 +46,20 @@ export class DisplaynoteComponent implements OnInit {
   }
 
   pin(){
+    
+  }
+
+  fun(){
+    this.index123=-1;
+  }
+
+
+  check(number){
+  /*  console.log(number);*/
+   this.index123=number
+  /* console.log( document.getElementById('number'));*/
+   
+
     
   }
 

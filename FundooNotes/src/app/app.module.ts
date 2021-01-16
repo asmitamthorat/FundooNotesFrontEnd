@@ -35,7 +35,17 @@ import { IconComponent } from './component/icon/icon.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { UpdateComponent } from './component/update/update.component';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { AddImageComponent } from './component/add-image/add-image.component';
+import { ReminderComponent } from './component/reminder/reminder.component';
+import { CollaboratarComponent } from './component/collaboratar/collaboratar.component';
+import { DeleteComponent } from './component/delete/delete.component';
+import { DisplayArchievComponent } from './component/display-archiev/display-archiev.component';
+import {
+  NgxMatDatetimePickerModule,
+  NgxMatNativeDateModule,
+  NgxMatTimepickerModule,
+} from '@angular-material-components/datetime-picker';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -58,6 +68,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     DisplaynoteComponent,
     IconComponent,
     UpdateComponent,
+    AddImageComponent,
+    ReminderComponent,
+    CollaboratarComponent,
+    DeleteComponent,
+    DisplayArchievComponent,
+   
    
    
    
@@ -80,6 +96,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatCardModule,
     MatMenuModule,
     MatDialogModule,
+    MatDatepickerModule,
+    NgxMatDatetimePickerModule,
+    NgxMatNativeDateModule,
+    NgxMatTimepickerModule,
 
   ],
   providers: [

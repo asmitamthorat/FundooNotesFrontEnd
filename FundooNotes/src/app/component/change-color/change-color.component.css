@@ -1,17 +1,24 @@
 span {
-    border-radius: 100%;
-    margin: 2px;
-    border: 2px solid white;
+  margin-left: 33px;
   }
   
   .first-row {
     display: flex;
   }
   
+
+  
+
+  /*
   .menu__row {
+
     display: flex;
     justify-content: space-between;
+  
+    width: 20px;
+   
   }
+  */
   
   span:hover {
     border: 2px solid black;
@@ -19,14 +26,13 @@ span {
   
   .color {
     height: 20px;
+    width: 10px;
   }
+
+
   
-  
-  
-  
-  .two-color {
-    background-color: #fbbc04;
-  }
+
+ 
   
   
   

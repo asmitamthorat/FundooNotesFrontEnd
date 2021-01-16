@@ -51,4 +51,13 @@ export class NoteService {
    }
 
 
+   deleteNotes(data:any){
+    return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/notes/trashNotes",data).pipe(
+      tap(()=>{
+        this._refresh$.next();
+      })
+    )
+   }
+
+
 }

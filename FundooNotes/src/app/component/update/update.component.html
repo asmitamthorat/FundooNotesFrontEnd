@@ -25,11 +25,29 @@
           </div>
           <div class="icon-flex" fxFlex="100" fxLayoutAlign="space-between center">
            
-            <div>
-              <button mat-icon-button matSuffix (click)='updateNote(data)' >close</button>
+            <div class="icon-flex1">
+              <div>
+                <app-change-color (ItemEvent)="getcolor($event)"></app-change-color>
             </div>
             <div>
-                <app-change-color (ItemEvent)="getcolor($event)"></app-change-color>
+              <app-reminder></app-reminder>
+            </div>
+            <div>
+              <app-collaboratar></app-collaboratar>
+            </div>        
+            <div>
+              <app-add-image></app-add-image>
+            </div>
+            <div>
+              <app-archieve></app-archieve>
+            </div>
+            <div>
+              <app-delete [noteId]="id"></app-delete>
+            </div>
+            </div>
+            
+            <div class="closeButton">
+              <button mat-icon-button matSuffix (click)='updateNote(data)' >Close</button>
             </div>
           </div>
         </mat-card>

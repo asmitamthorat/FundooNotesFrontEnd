@@ -22,32 +22,36 @@
 
     <div class="downflex" *ngIf="!flag" >
 
-       
+        <mat-card>
           <form class="form" [formGroup]="myForm">
             <div class="add-note-title">
                 
-                    <input matInput type="text"  id="search-input" autocomplete="off" placeholder="title" formControlName="title"/>
-                  
-               
+                    <input matInput type="text"  id="search-input" autocomplete="off" placeholder="Title" formControlName="title"/>
             </div>
             <div class="Take-note">
                 
                     <input matInput type="text"  id="search-input" autocomplete="off" placeholder="Take a note.." formControlName="description" />
-                    
-               
             </div>
             <div class="last-flex">
-                <app-archieve class="child-component" (newItemEvent)="GetOutputVal($event)" ></app-archieve>
-                <app-change-color class="child-color" (ItemEvent)="getcolor($event)" ></app-change-color>
-                <button mat-icon-button >
-                    <span class="close-icon" (click)='submitNote()'>close</span>
-                </button>
+                <div class="last-flex1">  
+
+                    <app-archieve class="child-component" (newItemEvent)="GetOutputVal($event)" ></app-archieve>
+                    <app-change-color class="child-color" (ItemEvent)="getcolor($event)" ></app-change-color>
                 
-               
+                    <app-add-image></app-add-image>
+                    <app-reminder class="reminder-component" (reminderEvent)="getReminder($event)"></app-reminder>
+                    <app-collaboratar></app-collaboratar>
+                </div>
+                <div class="last-flex2">
+                    <button mat-icon-button >
+                        <span class="close-icon" (click)='submitNote()'>Close</span>
+                    </button>
+                </div>
             </div>
             
+            
           </form>      
-       
+        </mat-card>
         
     </div>
     
