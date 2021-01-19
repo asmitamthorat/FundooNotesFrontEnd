@@ -10,7 +10,7 @@
     <div>
         <div class="sidebar__notes1" >
           <div class="section"></div>
-            <button mat-button>
+            <button mat-button (click)='homeButtonClick()'>
               <img
                 src="https://static.thenounproject.com/png/10329-200.png"
                 alt="note-icon"
@@ -31,17 +31,17 @@
           <div class="sidebar__notes3">
             <button mat-button>
               <img
-                src="
-            https://cdn2.iconfinder.com/data/icons/education-2-45/48/71-512.png "
-                alt="note-icon"
+                src= "https://cdn2.iconfinder.com/data/icons/education-2-45/48/71-512.png"
+                alt="bell-icon"
               />
             </button>
+          
             <div class="section"></div>
            
           </div>
           <div
             class="sidebar__notes4">
-            <button mat-button>
+            <button mat-button (click)='archieveClick()'>
               <img
                 src="
                 https://cdn.iconscout.com/icon/free/png-256/archive-rar-extract-zip-file-data-diocument-secure-31759.png"
@@ -52,7 +52,7 @@
            
           </div>
           <div class="sidebar__notes5" >
-            <button mat-button>
+            <button mat-button (click)='trashClick()'>
               <img
                 src="
           https://www.svgrepo.com/show/21045/delete-button.svg"

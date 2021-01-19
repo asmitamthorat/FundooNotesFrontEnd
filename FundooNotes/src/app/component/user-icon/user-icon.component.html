@@ -1,0 +1,25 @@
+
+<div class="container">
+    <button mat-icon-button class="user-icon" [matMenuTriggerFor]="labelMenu">
+        <img
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMTZweCIgd2lkdGg9IjE2cHgiIHZlcnNpb249IjEuMSIgeT0iMHB4IiB4PSIwcHgiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOTYgOTYiPgo8ZyBpZD0iSWNvbiI+CgkJCTxjaXJjbGUgY3k9IjQ4IiBjeD0iNDgiIHI9IjQ4IiBmaWxsPSIjQzZEQUZDIi8+CgkJCTxnIGZpbGw9IiM1RTk3RjYiPgoJCQkJPHBhdGggZD0ibTQ4IDIzYy04LjI4IDAtMTUgNi43Mi0xNSAxNXM2LjcyIDE1IDE1IDE1IDE1LTYuNzIgMTUtMTUtNi43Mi0xNS0xNS0xNXoiLz4KCQkJCTxwYXRoIGQ9Im00OCA2MWMtMTAuMzMgMC0zMSA1LjE3LTMxIDE1LjV2OC4xM2M4LjM2IDcuMDkgMTkuMTggMTEuMzcgMzEgMTEuMzdzMjIuNjQtNC4yOCAzMS0xMS4zN3YtOC4xM2MwLTEwLjMzLTIwLjY3LTE1LjUtMzEtMTUuNXoiLz4KCQkJPC9nPgoJCTxyZWN0IHk9IjAiIHg9IjAiIGhlaWdodD0iOTYiIHdpZHRoPSI5NiIgZmlsbD0ibm9uZSIvPgo8L2c+Cjwvc3ZnPgo="
+        >
+
+    </button>
+
+    <mat-menu #labelMenu="matMenu" [hasBackdrop]="false" class="matmanu">
+    <div>
+       
+            <input type="file" (change)="getUploadImage($event)" />
+            <button type="button" (click)='upload()' >submit</button>
+
+        
+       
+    </div>
+   
+
+    </mat-menu>
+
+</div>
+
+

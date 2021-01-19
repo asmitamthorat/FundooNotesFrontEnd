@@ -1,0 +1,44 @@
+<div class="mar" >
+    <mat-card  class="main-card" *ngFor="let card of notes ; index as index"  [style.background-color]=card.color
+        fxLayout.xs="column" fxFlex.xs="95"  (mouseenter)="check(index)"
+        (mouseleave)="fun()" [id]='index'  >
+        
+            <div class="title-discription" >
+                <div fxLayout="row">
+                    <div fxFlex="20">
+                        <p  class="wordBreakTitle">{{card.title}}</p>
+                    </div>
+                    
+                </div>
+        
+                <div class="descriptionbox" >
+                    <p class="wordBreak">{{card.description}}</p>
+
+                </div>
+            </div>
+            <mat-card-actions class="third-block" [style.opacity]="index123!==index ? '0' : '1'" (mouseenter)="check(index)">
+                <div class="icon-flex" fxFlex="100" fxLayoutAlign="space-between center"  >
+                     
+                        <div>
+                            <app-change-color (ItemEvent)="getcolor($event)"></app-change-color>
+                        </div>
+                        <div>
+                        <app-reminder></app-reminder>
+                        </div>
+                        <div>
+                        <app-collaboratar></app-collaboratar>
+                        </div>        
+                        <div>
+                        <app-add-image></app-add-image>
+                        </div>
+                        <div>
+                        <app-archieve></app-archieve>
+                        </div>
+                        <div>
+                            <app-delete [noteId]="card.id" ></app-delete>
+                        </div>
+                </div>
+            </mat-card-actions>
+    </mat-card>
+
+</div>

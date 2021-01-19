@@ -13,6 +13,8 @@ import { AuthGuard } from './auth.guard';
 import {NoteComponent} from './component/note/note.component'
 import { DisplayArchievComponent } from './component/display-archiev/display-archiev.component';
 import { ReminderComponent } from './component/reminder/reminder.component';
+import { DeleteComponent } from './component/delete/delete.component';
+import { TrashComponent } from './component/trash/trash.component';
 
 
 
@@ -37,10 +39,11 @@ const routes: Routes = [
     component:SidenaveComponent,
     canActivate:[AuthGuard],children: [
       { path:"",component: NoteComponent },
-      { path:"archieve",component:DisplayArchievComponent}
+      { path:"archieve",component:DisplayArchievComponent},
+      {path:"trashNotes",component:TrashComponent}
     ]
   },
-  {path:'takenote',component:TakeNoteComponent},
+  {path:'deleteComponent',component:DeleteComponent,canActivate:[AuthGuard]},
   
   {
     path:'displaynotes',

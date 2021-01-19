@@ -59,5 +59,35 @@ export class NoteService {
     )
    }
 
+   getNoteLabelList():Observable<any>{
+     
+     return this.http.get("http://fundoonotes.incubation.bridgelabz.com/api/noteLabels/getNoteLabelList");
+   }  
+
+   getTrashNotes():Observable<any>{
+        return this.http.get("http://fundoonotes.incubation.bridgelabz.com/api/notes/getTrashNotesList");
+   }
+
+
+   setProfileImage(data:any){
+     return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/user/uploadProfileImage",data);
+   }
+
+
+   addLabelToNoteUri(noteId, labelId): string{
+    return `${environment.backendUri}notes/${noteId}/addLabelToNotes/${labelId}/add`; 
+  }
+
+  addLabelToNote(data, noteId, labelId){
+    console.log("in service")
+    console.log(this.addLabelToNoteUri(noteId, labelId));
+    return this.http.post(data, this.addLabelToNoteUri(noteId, labelId)).pipe(
+      tap(()=>{
+        
+        this._refresh$.next();
+      })
+    );
+  }
+
 
 }

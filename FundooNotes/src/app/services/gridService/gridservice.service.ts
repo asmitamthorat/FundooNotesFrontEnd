@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class GridserviceService {
-  isgrid:boolean=false;
+ public isgrid:boolean=false;
 
   /*private gridvalue=new BehaviorSubject<boolean>(false);
   currentGridValue=this.gridvalue.asObservable();

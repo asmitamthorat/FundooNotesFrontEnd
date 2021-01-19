@@ -16,6 +16,32 @@
              
               <span>Delete note</span>
             </button>
+            <button mat-menu-item [matMenuTriggerFor]="labelMenu">
+              Add Label
+            </button>
+          </mat-menu>
+
+
+
+          <mat-menu #labelMenu="matMenu" [hasBackdrop]="false">
+            
+              <form [formGroup]="labelForm" class="labelForm">
+                <div class="searchLabel" (click)="$event.stopPropagation()" >
+                  <input type="text" matInput autocomplete="off" formControlName="label" placeholder="enter label" (mouseenter)="getNoteLabelList()"/>
+                </div>
+              </form>
+              <div class="labels" *ngFor="let label of note">
+                <div class="label">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                   
+                    (click)="addLabelToNote(label)"
+                  />
+                  {{ label.label }}
+                </div>
+              </div> 
            
           </mat-menu>
     </div>

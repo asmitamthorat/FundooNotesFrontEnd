@@ -10,7 +10,11 @@
     outline: 0px white;
 }
 
-
+.mainDialog{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+}
 
 .mainDialog .mat-card{
     width: 100%;
@@ -53,4 +57,51 @@
 
 .icon-flex1{
     display: flex;
+}
+
+
+::ng-deep .mat-mini-fab .mat-button-wrapper {
+    padding: 8px 0;
+    display: inline-block;
+    line-height: 1px;
+}
+
+
+::ng-deep .mat-dialog-container {
+    /* display: block; */
+    /* padding: 24px; */
+    /* border-radius: 4px; */
+    /* box-sizing: border-box; */
+    /* overflow: auto; */
+    /* outline: 0; */
+    width: 100%;
+    height: 100%;
+    /* min-height: inherit; */
+    /* max-height: inherit; */
+}
+
+
+
+/deep/ .mat-dialog-container {
+
+    display: block;
+    padding: 0px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: auto;
+    outline: 0;
+    width: 700px;
+    height: 100px;
+    min-height: inherit;
+    max-height: inherit;
+}
+
+/deep/ .mat-card {
+    margin-top: 0px;
+
+}
+
+
+.icon-flex{
+    margin-top: 20px;
 }

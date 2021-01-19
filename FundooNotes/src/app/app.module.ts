@@ -46,6 +46,9 @@ import {
   NgxMatTimepickerModule,
 } from '@angular-material-components/datetime-picker';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { LabelComponent } from './component/label/label.component';
+import { TrashComponent } from './component/trash/trash.component';
+import { UserIconComponent } from './component/user-icon/user-icon.component';
 
 
 
@@ -73,6 +76,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     CollaboratarComponent,
     DeleteComponent,
     DisplayArchievComponent,
+    LabelComponent,
+    TrashComponent,
+    UserIconComponent,
    
    
    

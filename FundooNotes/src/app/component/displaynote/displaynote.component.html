@@ -4,7 +4,7 @@
         <div class="mar" >
             <mat-card  class="main-card" *ngFor="let card of AllNotes ; index as index"  [style.background-color]=card.color
                 fxLayout.xs="column" fxFlex.xs="95"  (mouseenter)="check(index)"
-                (mouseleave)="fun()" [id]='index' [style.width]="gridservice.isgrid === true ? '600px' : '300px'">
+                (mouseleave)="fun()" [id]='index' [style.width]="gridservice.isgrid === true ? '700px' : '300px'"   >
                 
                     <div class="title-discription" (click)="openDialog(card)">
                         <div fxLayout="row">
@@ -15,8 +15,11 @@
                         </div>
                 
                         <div class="descriptionbox" (click)="openDialog(card)">
-                            <p class="wordBreak">{{card.description}}</p>
+                            <p class="wordBreak">{{gridservice.isgrid }}</p>
 
+                        </div>
+                        <div class="reminderClass" *ngIf="card.reminder[0]">
+                            <p>{{card.reminder[0]}}</p>
                         </div>
                     </div>
                     <mat-card-actions class="third-block" [style.opacity]="index123!==index ? '0' : '1'" (mouseenter)="check(index)">
@@ -30,7 +33,7 @@
                                 <app-reminder></app-reminder>
                                 </div>
                                 <div>
-                                <app-collaboratar></app-collaboratar>
+                                <app-collaboratar [card]="card"></app-collaboratar>
                                 </div>        
                                 <div>
                                 <app-add-image></app-add-image>

@@ -18,6 +18,7 @@ export class DisplayArchievComponent implements OnInit {
   index123=-1;
   grid:boolean=false;
   AllNotes=[];
+  
   constructor(public dialog: MatDialog,private elementRef:ElementRef,private gridservice:GridserviceService,private noteservice:NoteService) {
       this.noteservice.getnote().subscribe((response:any)=>{
         console.log(response);

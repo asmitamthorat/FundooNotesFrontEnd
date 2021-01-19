@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="update.component.css">
-</head>
-<body>
+
     <div   [style.background-color]=color class="mainDialog">
         <mat-card [style.background-color]=color class="takeNote" fxLayout='column' fxFlex.xs='100' fxFlex='100'>
       
@@ -23,6 +15,8 @@
               cdkAutosizeMinColumns="50" [style.background-color]=color cdkAutosizeMaxRows="18" placeholder="Take a Note"
               [(ngModel)]="description" ></textarea>
           </div>
+          
+
           <div class="icon-flex" fxFlex="100" fxLayoutAlign="space-between center">
            
             <div class="icon-flex1">
@@ -53,5 +47,4 @@
         </mat-card>
     </div>
     
-</body>
-</html>
+

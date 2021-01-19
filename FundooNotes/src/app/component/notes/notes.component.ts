@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-notes',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router:Router) { }
 
   ngOnInit(): void {
   }
 
+
+  archieveClick(){
+    console.log("hit");
+    this._router.navigate(['/home/archieve'])
+  }
+
+
+  trashClick(){
+    this._router.navigate(['/home/trashNotes'])
+  }
+
+
+  homeButtonClick(){
+    this._router.navigate(['/home'])
+  }
+  
+
 }
+
+
+

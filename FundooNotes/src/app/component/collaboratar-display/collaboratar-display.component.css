@@ -1,0 +1,46 @@
+.flex-1{
+    border-bottom:1px solid black
+
+}
+
+.flex-2{
+ /*   border: 1px solid black;*/
+    margin-top: 10px;
+    display: flex;
+}
+.flex-2-1 img{
+    height: 25px;
+    width: 25px;
+}
+
+.flex-2-2{
+   /* border: 1px solid black;*/
+    margin-left: 20px;
+}
+
+.flex-3-1 img{
+    height: 25px;
+    width: 25px;
+}
+
+.flex-3{
+    display: flex;
+    margin-top: 5px;
+}
+.flex-3 input{
+    outline: none;
+    border: none;
+    margin-left: 20px;
+   
+}
+
+.flex-4{
+    background-color: black;
+    background-color: rgb(235, 231, 231);
+    display: flex;
+    justify-items: end;
+}
+
+.flex-4-1 button{
+    margin-left: 500px;
+}
