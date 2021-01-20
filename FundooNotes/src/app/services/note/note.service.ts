@@ -50,6 +50,14 @@ export class NoteService {
         );
    }
 
+   archieveNote(data:any){
+      return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/notes/archiveNotes",data).pipe(
+        tap(()=>{
+          this._refresh$.next();
+        })
+      )
+   }
+
 
    deleteNotes(data:any){
     return this.http.post(environment.backendUri +'notes/trashNotes',data).pipe(
