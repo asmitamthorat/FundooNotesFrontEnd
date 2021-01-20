@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { Output, EventEmitter } from '@angular/core';
+import { NoteService } from 'src/app/services/note/note.service';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-reminder',
@@ -10,7 +12,8 @@ import { Output, EventEmitter } from '@angular/core';
 export class ReminderComponent implements OnInit {
 
   myForm:FormGroup;
-  constructor() { }
+  @Input() card:any;
+  constructor(private noteService:NoteService) { }
 
   ngOnInit(): void {
   }
@@ -27,8 +30,27 @@ export class ReminderComponent implements OnInit {
    
     this.reminderEvent.emit(this.date);
     console.log(this.date)
+    console.log("reminder");
+    let data={
+     reminder: this.date, noteIdList: [this.card.id]
+    }
+    this.noteService.updateReminderList(data).subscribe((response)=>{
+      console.log(response);
+    })
 
   }
+
+  updateReminder(){
+    console.log("reminder");
+   let data={
+    reminder: this.date, noteIdList: [this.card.note.id]
+   }
+   this.noteService.updateReminderList(data).subscribe((response)=>{
+     console.log(response);
+   })
+
+  }
+
 
 
 

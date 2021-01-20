@@ -58,6 +58,14 @@ export class NoteService {
       )
    }
 
+   updateReminderList(data:any){
+     return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/notes/addUpdateReminderNotes",data).pipe(
+      tap(()=>{
+        this._refresh$.next();
+      })
+    )
+   }
+
 
    deleteNotes(data:any){
     return this.http.post(environment.backendUri +'notes/trashNotes',data).pipe(
