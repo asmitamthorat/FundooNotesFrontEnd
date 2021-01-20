@@ -14,9 +14,11 @@ export class DisplaynoteComponent implements OnInit {
   myDiv;
   index123=-1;
   grid:boolean=false;
+  card:any;
   constructor(public dialog: MatDialog,private elementRef:ElementRef,private gridservice:GridserviceService) {
     this.grid=this.gridservice.isgrid;
     console.log(this.grid)
+    
    }
 
  
@@ -33,7 +35,10 @@ export class DisplaynoteComponent implements OnInit {
   }
 
   openDialog(card:any):void{
-   /* console.log(card)*/
+   /* console.log(card);
+    let a=card.reminder[0];
+    console.log(a);*/
+      this.card=card;
     const dialogRef = this.dialog.open(UpdateComponent, {
      
       data: {note: card}

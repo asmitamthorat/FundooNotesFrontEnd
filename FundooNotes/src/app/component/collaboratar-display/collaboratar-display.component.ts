@@ -1,6 +1,6 @@
 import { Component, Inject,OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { NoteService } from 'src/app/services/note/note.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class CollaboratarDisplayComponent implements OnInit {
   data:any;
   userEmail:any;
   userName:any;
-  collaboratorForm: FormGroup;
+  collaboratorEmail=new FormControl('');
+ 
   listOfCollaborators:[];
   
   
@@ -24,24 +25,20 @@ export class CollaboratarDisplayComponent implements OnInit {
      
       this.data=JSON.parse(localStorage.getItem('data'));
      this.userEmail=this.data.email;
-   /*  console.log(this.userName=this.data.firstName+" "+ this.data.lastName)*/
+      this.userName=this.data.firstName+" "+ this.data.lastName
       
    }
   
 
   ngOnInit(): void {
-    this.collaboratorForm = this._builder.group({
-      collaboratorEmail: this._builder.array([this._builder.control('')]),
-    })
+    
   }
 
   submitUser(){
     
   }
 
-  get collaboratorEmail() {
-    return this.collaboratorForm.get('collaboratorEmail').value ;
-  }
+  
 
    getCollaboraterList(email){
     let data={searchWord: email}

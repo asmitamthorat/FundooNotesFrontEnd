@@ -21,7 +21,7 @@
 
                         </div>
                         <div class="reminderClass" *ngIf="card.reminder[0]">
-                            <p>{{card.reminder[0]}}</p>
+                            <p>{{card.reminder[0] | date }}</p>
                         </div>
                     </div>
                     <mat-card-actions class="third-block" [style.opacity]="index123!==index ? '0' : '1'" (mouseenter)="check(index)">
