@@ -12,6 +12,7 @@ import { EventEmitter, Output } from '@angular/core';
 })
 export class AddnotesComponent implements OnInit {
   myForm:FormGroup;
+  reminderFlag:boolean;
   reminder:string;
   flag:boolean=true;
   isColor:string='';
@@ -51,6 +52,7 @@ export class AddnotesComponent implements OnInit {
   getReminder(reminder:any){
     console.log(reminder);
     this.reminder=reminder;
+    this.reminderFlag=true;
 
 
   }
@@ -73,7 +75,9 @@ export class AddnotesComponent implements OnInit {
     } );
     this.title.setValue('');
     this.description.setValue('');
-    
+    this.reminder='';
+    this.reminderFlag=false;
+    this.isColor=null;
     } ;
 
     onclick() {  
@@ -90,6 +94,12 @@ export class AddnotesComponent implements OnInit {
     this.messageEvent.emit(this.message)
   }
 
-  
+  abc(){
+
+    
+
+
+
+  }
 
 }

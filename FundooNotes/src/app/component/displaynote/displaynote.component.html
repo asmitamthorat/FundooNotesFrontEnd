@@ -5,10 +5,7 @@
             <mat-card  class="main-card" *ngFor="let card of AllNotes ; index as index"  [style.background-color]=card.color
                 fxLayout.xs="column" fxFlex.xs="95"  (mouseenter)="check(index)"
                 (mouseleave)="fun()" [id]='index' [style.width]="gridservice.isgrid === true ? '700px' : '300px'" 
-                
-                [style.margin-left]="gridservice.isgrid === true ? '190px' : '170px'"
-                
-                
+                   
                 >
                 
                     <div class="title-discription" (click)="openDialog(card)">
@@ -20,7 +17,7 @@
                         </div>
                 
                         <div class="descriptionbox" (click)="openDialog(card)">
-                            <p class="wordBreak">{{gridservice.isgrid }}</p>
+                            <p class="wordBreak">{{card.description }}</p>
 
                         </div>
                         <div class="reminderClass" *ngIf="card.reminder[0]">
@@ -28,7 +25,10 @@
                         </div>
                     </div>
                     <mat-card-actions class="third-block" [style.opacity]="index123!==index ? '0' : '1'" (mouseenter)="check(index)">
-                        <div class="icon-flex" fxFlex="100" fxLayoutAlign="space-between center"  >
+                        <div class="icon-flex" fxFlex="100" fxLayoutAlign="space-between center" 
+                        [style.width]="gridservice.isgrid === true ? '720px' : '320px'"
+                        
+                        >
                             
                              
                                 <div>

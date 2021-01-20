@@ -12,7 +12,7 @@ export class SidenaveComponent implements OnInit {
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
   private _mobileQueryListener: () => void;
-  isGrid:boolean;
+  isGrid:boolean=false;
   constructor(private gridservice:GridserviceService) { 
 
    
@@ -24,9 +24,16 @@ export class SidenaveComponent implements OnInit {
   }
 
   gridFunction(){
-    this.isGrid=true;
-    console.log(this.isGrid)
-    this.gridservice.isgrid=true;
+    if(this.isGrid==false){
+      this.gridservice.isgrid=true;
+      this.isGrid=true;
+    }else{
+      this.isGrid=false;
+      this.gridservice.isgrid=false;
+    }
+   /* this.isGrid=true;
+    console.log(this.isGrid)*/
+    
    /* this.gridservice.changegridvalue(true)*/
   }
  

@@ -32,6 +32,12 @@
                 
                     <input matInput type="text"  id="search-input" autocomplete="off" placeholder="Take a note.." formControlName="description" />
             </div>
+            <div *ngIf="reminderFlag">
+                <div class="reminder">
+                    {{reminder}}
+                </div>
+            </div>
+            
             <div class="last-flex">
                 <div class="last-flex1">  
 

@@ -12,11 +12,11 @@
    
   
 }
-
+/*
 .downflex .mat-card{
     height: 110px;
     width: 800px;
-}
+}*/
 
 .downflex .form{
   
@@ -40,7 +40,7 @@
     height: 40px;
     width: 800px;
     margin-top: 10px;
-  /* border:  1px solid black;*/
+ /*  border:  1px solid black;*/
 }
 
 .last-flex1{
@@ -57,7 +57,7 @@
     height: 40px;
     width: 50px;
    justify-content: space-around;
- /*  border:  1px solid black;*/
+/*   border:  1px solid black;*/
 
 }
 
@@ -67,7 +67,7 @@
 
 
 .add-note-title  input{
-   /* border:  1px solid black;*/
+ /*   border:  1px solid black;*/
     margin-top: 5px;
     width: 400px;
     height: 30px;
@@ -77,7 +77,7 @@
 }
 
 .Take-note input{
-  /*  border:  1px solid black;*/
+ /*  border:  1px solid black;*/
     margin-top: 5px;
     width: 400px;
     height: 30px;
@@ -101,19 +101,20 @@
     outline: none;
 }
 
-
+/*
 .mat-card {
     background: #fff;
-  /*  color: rgba(0,0,0,.87);*/
+   color: rgba(0,0,0,.87);
     width: 400px;
-}
+    height: 170px;
+}*/
 
 
 
 .mat-card[_ngcontent-eoj-c96] {
     background: #fff;
     width: 400px;
-    height: 130px;
+    height: 170px;
 }
 
 
@@ -132,14 +133,36 @@
     height: 35px;
 }
 
+.reminder{
+    height: 30px;
+    width: 800px;
+  
+   background-color: rgba(192,192,192,0.3);
+   border-radius: 20px;
+   height: 25px;
+}
 
 .takenote-flask .mat-card{
     height: 30px;
     width: 800px;
-  /*  border:  1px solid black;*/
+/*   border:  1px solid black;*/
 }
 
 .takenote-flask{
    margin-left: 300px;
    
+}
+
+
+
+
+/deep/ .downflex .mat-card {
+    width: 800px;
+    height: 500px;
+}
+
+
+.downflex[_ngcontent-rik-c151] .mat-card[_ngcontent-rik-c151] {
+     height: 0px; 
+     width: 0px; 
 }
