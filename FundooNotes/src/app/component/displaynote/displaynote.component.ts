@@ -15,7 +15,8 @@ export class DisplaynoteComponent implements OnInit {
   index123=-1;
   grid:boolean=false;
   constructor(public dialog: MatDialog,private elementRef:ElementRef,private gridservice:GridserviceService) {
-              
+    this.grid=this.gridservice.isgrid;
+    console.log(this.grid)
    }
 
  

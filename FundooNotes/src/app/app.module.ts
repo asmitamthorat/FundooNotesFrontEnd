@@ -26,7 +26,6 @@ import { ArchieveComponent } from './component/archieve/archieve.component';
 import { ChangeColorComponent } from './component/change-color/change-color.component';
 import { TakeNoteComponent } from './component/take-note/take-note.component';
 import { DashBoardFinalComponent } from './component/dash-board-final/dash-board-final.component';
-
 import {TokeninterceptorService} from './services/token/tokeninterceptor.service';
 import { AuthGuard } from './auth.guard';
 import { NoteComponent } from './component/note/note.component';
@@ -49,6 +48,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { LabelComponent } from './component/label/label.component';
 import { TrashComponent } from './component/trash/trash.component';
 import { UserIconComponent } from './component/user-icon/user-icon.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 
@@ -106,6 +106,7 @@ import { UserIconComponent } from './component/user-icon/user-icon.component';
     NgxMatDatetimePickerModule,
     NgxMatNativeDateModule,
     NgxMatTimepickerModule,
+    MatAutocompleteModule,
 
   ],
   providers: [

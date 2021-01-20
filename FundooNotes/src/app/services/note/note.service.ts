@@ -90,4 +90,9 @@ export class NoteService {
   }
 
 
+  getCollaboratorList(data:any){
+    return this.http.get("http://fundoonotes.incubation.bridgelabz.com/api/user/searchUserList",data)
+  }
+
+
 }

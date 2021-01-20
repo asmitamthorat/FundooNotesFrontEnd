@@ -12,20 +12,24 @@ export class GridserviceService {
 */
 
 
-  constructor() { }
+  constructor() {
+    console.log(this.isgrid)
+   }
 
   /*changegridvalue(isgrid:boolean){
     this.gridvalue.next(isgrid)
     console.log(this.currentGridValue)
   }
 */
+/*
   setGrid(isgrid: boolean){
     this.isgrid=isgrid
    console.log(this.isgrid)
-  }
-
+  }*/
+/*
   getGrid(){
     console.log(this.isgrid)
     return this.isgrid
   }
+  */
 }
