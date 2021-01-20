@@ -43,7 +43,7 @@ export class NoteService {
 
 
    changeColorOfNote(data:any){
-        return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/notes/changesColorNotes",data).pipe(
+        return this.http.post(environment.backendUri +'notes/changesColorNotes',data).pipe(
           tap(()=>{
             this._refresh$.next();
           })
@@ -52,7 +52,7 @@ export class NoteService {
 
 
    deleteNotes(data:any){
-    return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/notes/trashNotes",data).pipe(
+    return this.http.post(environment.backendUri +'notes/trashNotes',data).pipe(
       tap(()=>{
         this._refresh$.next();
       })
@@ -61,16 +61,16 @@ export class NoteService {
 
    getNoteLabelList():Observable<any>{
      
-     return this.http.get("http://fundoonotes.incubation.bridgelabz.com/api/noteLabels/getNoteLabelList");
+     return this.http.get(environment.backendUri +'noteLabels/getNoteLabelList');
    }  
 
    getTrashNotes():Observable<any>{
-        return this.http.get("http://fundoonotes.incubation.bridgelabz.com/api/notes/getTrashNotesList");
+        return this.http.get(environment.backendUri + 'notes/getTrashNotesList');
    }
 
 
    setProfileImage(data:any){
-     return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/user/uploadProfileImage",data);
+     return this.http.post(environment.backendUri+'user/uploadProfileImage',data);
    }
 
 
@@ -91,7 +91,8 @@ export class NoteService {
 
 
   getCollaboratorList(data:any){
-    return this.http.get("http://fundoonotes.incubation.bridgelabz.com/api/user/searchUserList",data)
+    return this.http.get(environment.backendUri+'user/searchUserList',data);
+
   }
 
 
