@@ -47,12 +47,7 @@ export class DeleteComponent implements OnInit {
     return this.labelForm.get('label').value;
   }
 
- /*
-  checkIfLabelExists(label) {
-    return (
-      this.noteLabels && !!this.noteLabels.find((note) => note.id === label.id)
-    );
-  }*/
+ 
 /*
 
   

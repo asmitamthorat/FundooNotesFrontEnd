@@ -49,6 +49,9 @@ import { LabelComponent } from './component/label/label.component';
 import { TrashComponent } from './component/trash/trash.component';
 import { UserIconComponent } from './component/user-icon/user-icon.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { DemoComponentComponent } from './component/demo-component/demo-component.component';
+import { CommonModule } from '@angular/common';
+
 
 
 
@@ -79,6 +82,9 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     LabelComponent,
     TrashComponent,
     UserIconComponent,
+    DemoComponentComponent,
+   
+  
    
    
    
@@ -107,7 +113,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     NgxMatNativeDateModule,
     NgxMatTimepickerModule,
     MatAutocompleteModule,
-   
+    CommonModule,
    
 
   ],

@@ -15,6 +15,7 @@ import { DisplayArchievComponent } from './component/display-archiev/display-arc
 import { ReminderComponent } from './component/reminder/reminder.component';
 import { DeleteComponent } from './component/delete/delete.component';
 import { TrashComponent } from './component/trash/trash.component';
+import { DemoComponentComponent } from './component/demo-component/demo-component.component';
 
 
 
@@ -33,6 +34,7 @@ const routes: Routes = [
     canActivate:[AuthGuard]
   },
   {path:'reminder' ,component:ReminderComponent,canActivate:[AuthGuard]},
+  {path:'demo',component:DemoComponentComponent},
 
   {
     path:'home',

@@ -2,6 +2,9 @@ import { Component, Inject,OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { NoteService } from 'src/app/services/note/note.service';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-collaboratar-display',
@@ -15,8 +18,8 @@ export class CollaboratarDisplayComponent implements OnInit {
   data:any;
   userEmail:any;
   userName:any;
-  collaboratorEmail=new FormControl('');
  
+  myForm:FormGroup;
   listOfCollaborators:[];
   
   
@@ -30,14 +33,28 @@ export class CollaboratarDisplayComponent implements OnInit {
    }
   
 
-  ngOnInit(): void {
-    
+  
+
+ 
+ 
+
+  ngOnInit() {
+   this.myForm=this._builder.group({
+    collaboratorEmail:['']
+   })
+  
   }
+
+ 
 
   submitUser(){
     
   }
-
+  
+  get collaboratorEmail(){
+    return this.myForm.get('collaboratorEmail').value;
+  }
+  
   
 
    getCollaboraterList(email){

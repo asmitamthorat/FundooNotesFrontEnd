@@ -25,6 +25,7 @@ export class ChangeColorComponent implements OnInit {
     console.log(color)
     this.isColor=color;
     this.ItemEvent.emit(this.isColor)
+    
   }
 
 }

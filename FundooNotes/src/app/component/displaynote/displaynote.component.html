@@ -1,14 +1,14 @@
 
     <div >
         
-        <div class="mar" >
+        <div class="mar"   >
             <mat-card  class="main-card" *ngFor="let card of AllNotes ; index as index"  [style.background-color]=card.color
                 fxLayout.xs="column" fxFlex.xs="95"  (mouseenter)="check(index)"
                 (mouseleave)="fun()" [id]='index' [style.width]="gridservice.isgrid === true ? '700px' : '300px'" 
                    
                 >
                 
-                    <div class="title-discription" (click)="openDialog(card)">
+                    <div class="title-discription" (click)="openDialog(card)" (mouseenter)="getCard(card)">
                         <div fxLayout="row">
                             <div fxFlex="20">
                                 <p  class="wordBreakTitle">{{card.title}}</p>
@@ -16,12 +16,22 @@
                             
                         </div>
                 
-                        <div class="descriptionbox" (click)="openDialog(card)">
-                            <p class="wordBreak">{{card.description }}</p>
+                        <div class="descriptionbox" (click)="openDialog(card)" (mouseenter)="getCard(card)">
+                            <p class="wordBreak">{{card.description}}</p>
 
                         </div>
+                        <div class="notelable" *ngFor ="let label of card.noteLabels">
+                                    {{label.label}}
+                        </div>
                         <div class="reminderClass" *ngIf="card.reminder[0]">
-                            <p>{{card.reminder[0] | date }}</p>
+                            <div>
+                                <img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE4cHgiIHdpZHRoPSIxOHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzAwMDAwMCI+CiA8cGF0aCBkPSJtMjMuOTkgNGMtMTEuMDUgMC0xOS45OSA4Ljk1LTE5Ljk5IDIwczguOTQgMjAgMTkuOTkgMjBjMTEuMDUgMCAyMC4wMS04Ljk1IDIwLjAxLTIwcy04Ljk2LTIwLTIwLjAxLTIwem0wLjAxIDM2Yy04Ljg0IDAtMTYtNy4xNi0xNi0xNnM3LjE2LTE2IDE2LTE2IDE2IDcuMTYgMTYgMTYtNy4xNiAxNi0xNiAxNnoiLz4KIDxwYXRoIGQ9Im0wIDBoNDh2NDhoLTQ4eiIgZmlsbD0ibm9uZSIvPgogPHBhdGggZD0ibTI1IDE0aC0zdjEybDEwLjQ5IDYuMyAxLjUxLTIuNDYtOS01LjM0eiIvPgo8L3N2Zz4K" >
+
+                            </div>
+                            <div *ngFor="let reminder of card.reminder">
+                                <p>{{reminder | date}}</p>
+
+                            </div>
                         </div>
                     </div>
                     <mat-card-actions class="third-block" [style.opacity]="index123!==index ? '0' : '1'" (mouseenter)="check(index)">
@@ -32,7 +42,7 @@
                             
                              
                                 <div>
-                                    <app-change-color (ItemEvent)="getcolor($event)"></app-change-color>
+                                    <app-change-color  (ItemEvent)="getcolor($event)"></app-change-color>
                                 </div>
                                 <div>
                                 <app-reminder></app-reminder>

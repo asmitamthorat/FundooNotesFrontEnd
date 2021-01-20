@@ -78,15 +78,14 @@ export class NoteService {
     return `${environment.backendUri}notes/${noteId}/addLabelToNotes/${labelId}/add`; 
   }
 
-  addLabelToNote(data, noteId, labelId){
+  addLabelToNote(data, noteId:any, labelId:any){
     console.log("in service")
     console.log(this.addLabelToNoteUri(noteId, labelId));
-    return this.http.post(data, this.addLabelToNoteUri(noteId, labelId)).pipe(
+    return this.http.post(this.addLabelToNoteUri(noteId, labelId),data).pipe(
       tap(()=>{
-        
         this._refresh$.next();
       })
-    );
+    )
   }
 
 

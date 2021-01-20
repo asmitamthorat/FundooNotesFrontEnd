@@ -2,6 +2,7 @@ import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { UpdateComponent } from '../update/update.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { GridserviceService} from 'src/app/services/gridService/gridservice.service';
+import { NoteService } from 'src/app/services/note/note.service';
 
 @Component({
   selector: 'app-displaynote',
@@ -15,14 +16,10 @@ export class DisplaynoteComponent implements OnInit {
   index123=-1;
   grid:boolean=false;
   card:any;
-  constructor(public dialog: MatDialog,private elementRef:ElementRef,private gridservice:GridserviceService) {
+  constructor(private noteService:NoteService,public dialog: MatDialog,private elementRef:ElementRef,private gridservice:GridserviceService) {
     this.grid=this.gridservice.isgrid;
     console.log(this.grid)
-    
    }
-
- 
-
 
   ngOnInit(): void {
     this.grid=this.gridservice.isgrid;
@@ -31,7 +28,6 @@ export class DisplaynoteComponent implements OnInit {
     console.log(this.AllNotes)
    /* this.gridservice.currentGridValue.subscribe(grid=>this.grid=grid)
     console.log(this.grid)*/
-    
   }
 
   openDialog(card:any):void{
@@ -45,15 +41,10 @@ export class DisplaynoteComponent implements OnInit {
     })
   }
 
-  
-
-
   pinNote(card){
-
   }
 
-  pin(){
-    
+  pin(){   
   }
 
   fun(){
@@ -65,9 +56,23 @@ export class DisplaynoteComponent implements OnInit {
   /*  console.log(number);*/
    this.index123=number
   /* console.log( document.getElementById('number'));*/
-   
-
-    
   }
+
+  getcolor(isColor){
+    console.log(isColor);
+   /* this.color=isColor;*/
+    let data = {
+      color: isColor,
+      noteIdList: [this.card.id]
+    }
+    this.noteService.changeColorOfNote(data).subscribe((response:any) => {
+      console.log(" color changed successfully", response);
+    })
+  }
+
+  getCard(card:any){
+    this.card=card;
+  }
+
 
 }
