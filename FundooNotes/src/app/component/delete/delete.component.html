@@ -27,7 +27,7 @@
             
               <form [formGroup]="labelForm" class="labelForm">
                 <div class="searchLabel" (click)="$event.stopPropagation()" >
-                  <input type="text" matInput autocomplete="off" formControlName="label" placeholder="enter label" (mouseenter)="getNoteLabelList()"/>
+                  <input type="text" matInput autocomplete="off" formControlName="label" placeholder="select label" (mouseenter)="getNoteLabelList()"/>
                 </div>
               </form>
               <div class="labels" *ngFor="let label of note">
@@ -41,7 +41,21 @@
                   />
                   {{ label.label }}
                 </div>
-              </div> 
+
+              </div>
+              
+              
+            
+                  <form [formGroup]="labelForm" class="labelForm">
+                    <div class="searchLabel" (click)="$event.stopPropagation()" >
+                      <input type="text"  autocomplete="off" formControlName="label" placeholder="+ add new label" 
+                      (keyup.enter)="addlabelToUser()"
+                      
+                      />
+                    </div>
+                  </form>
+             
+            
            
           </mat-menu>
     </div>

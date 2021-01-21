@@ -51,7 +51,7 @@ export class NoteService {
    }
 
    archieveNote(data:any){
-      return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/notes/archiveNotes",data).pipe(
+      return this.http.post(environment.backendUri+'notes/archiveNotes',data).pipe(
         tap(()=>{
           this._refresh$.next();
         })
@@ -59,7 +59,7 @@ export class NoteService {
    }
 
    updateReminderList(data:any){
-     return this.http.post("http://fundoonotes.incubation.bridgelabz.com/api/notes/addUpdateReminderNotes",data).pipe(
+     return this.http.post(environment.backendUri+'/notes/addUpdateReminderNotes',data).pipe(
       tap(()=>{
         this._refresh$.next();
       })
@@ -74,6 +74,16 @@ export class NoteService {
       })
     )
    }
+
+   addLabletoUser(data:any){
+        return this.http.post( environment.backendUri +'/noteLabels',data).pipe(
+          tap(()=>{
+            this._refresh$.next();
+          })
+        )
+   }
+
+  
 
    getNoteLabelList():Observable<any>{
      

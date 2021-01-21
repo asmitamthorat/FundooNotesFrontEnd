@@ -13,6 +13,7 @@ export class DeleteComponent implements OnInit {
   data:any=[];
   isFound: boolean = true;
   note;
+ 
   constructor(private noteService:NoteService,private builder: FormBuilder) {
           
    }
@@ -66,6 +67,20 @@ export class DeleteComponent implements OnInit {
     this.noteService.addLabelToNote({},this.noteId,labelItem.id).subscribe((response:any)=>{
       console.log(response);
     });
+  }
+
+
+  addlabelToUser(){
+   let data={
+    isDeleted: false,
+    label: this.label,
+    userId: "5ff6e9d943833d00182fc7fd"
+    }
+
+    this.noteService.addLabletoUser(data).subscribe((response:any)=>{
+      console.log(response);
+    });
+
   }
 
 }
