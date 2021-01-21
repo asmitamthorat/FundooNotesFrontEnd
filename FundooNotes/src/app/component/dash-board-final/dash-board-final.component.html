@@ -10,7 +10,7 @@
       <div class="left-flex">
            
                 <div class="sidebar__notes sidebar__notes-notes" >
-                  <button>
+                  <button (click)='homeButtonClick()'>
                     <img
                       src="https://static.thenounproject.com/png/10329-200.png"
                       alt="note-icon"
@@ -41,7 +41,7 @@
                   class="sidebar__notes sidebar__notes-archieve"
                   
                 >
-                  <button>
+                  <button (click)='archieveClick()'>
                     <img
                       src="
                       https://cdn.iconscout.com/icon/free/png-256/archive-rar-extract-zip-file-data-diocument-secure-31759.png"
@@ -51,7 +51,7 @@
                   <button>Archieve</button>
                 </div>
                 <div class="sidebar__notes sidebar__notes-delete" >
-                  <button>
+                  <button (click)='trashClick()'>
                     <img
                       src="
                 https://www.svgrepo.com/show/21045/delete-button.svg"

@@ -1,3 +1,4 @@
+import { CanActivate, Router } from '@angular/router';
 
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
@@ -15,10 +16,28 @@ export class DashBoardFinalComponent implements OnInit {
   sidebarClass:string = "sidebar";
  
 
-  constructor() { }
+  constructor(private _router:Router) { }
 
   ngOnInit(): void {
   }
+
+
+
+  archieveClick(){
+    console.log("hit");
+    this._router.navigate(['/home/archieve'])
+  }
+
+
+  trashClick(){
+    this._router.navigate(['/home/trashNotes'])
+  }
+
+
+  homeButtonClick(){
+    this._router.navigate(['/home'])
+  }
+  
 
   
 
